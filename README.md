@@ -1,6 +1,7 @@
 # Ecommerce Data Pipeline
 
-![Arquitetura da Pipeline](C:\Users\Luisin\Downloads\Diagrama sem nome.drawio (1).png)
+<img width="4611" height="2281" alt="Diagrama sem nome drawio (1)" src="https://github.com/user-attachments/assets/6ab549ee-2992-49e2-a5ae-8b07a45d49f7" />
+
 
 Este projeto é uma pipeline de dados desenvolvida para fins de estudo em Engenharia de Dados, abordando todo o ciclo de ingestão, transformação e orquestração de dados.
 
