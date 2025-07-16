@@ -4,5 +4,4 @@ ecommerce_analytics:
   outputs:
     dev:
       type: duckdb
-      path: /opt/airflow/data_warehouse/ecommerce.duckdb # O caminho do seu arquivo DuckDB dentro do contêiner
-      # Você precisaria garantir que o diretório data_warehouse/ é montado como volume no docker-compose.yml
+      path: /opt/airflow/data_warehouse/ecommerce.duckdb
