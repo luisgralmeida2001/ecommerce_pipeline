@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_amazon_sales
+    description: "Staging layer for the Amazon Sales dataset from Kaggle, with cleaned and typed fields"
+    columns:
+      - name: product_id
+        description: "Unique identifier of the product"
+        tests:
+          - not_null
+
+      - name: product_name
+        description: "Name of the product"
+        tests:
+          - not_null
+
+      - name: category
+        description: "Product category hierarchy"
+        tests:
+          - not_null
+
+      - name: discounted_price
+        description: "Discounted price of the product"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+      - name: actual_price
+        description: "Original price of the product"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+      - name: discount_percentage
+        description: "Discount percentage as float"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+
+      - name: rating
+        description: "Product rating from 0 to 5"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 5
+
+      - name: rating_count
+        description: "Number of ratings the product received"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+
+      - name: about_product
+        description: "Description of the product"

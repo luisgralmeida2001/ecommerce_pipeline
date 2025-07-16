@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: mart_product_category_insights
+    description: "Aggregated product insights by category from Amazon sales data"
+    columns:
+      - name: category
+        description: "Product category"
+      - name: total_products
+        description: "Total distinct products in the category"
+      - name: avg_actual_price
+        description: "Average original price of products in the category"
+      - name: avg_discounted_price
+        description: "Average discounted price of products in the category"
+      - name: avg_discount_percentage
+        description: "Average discount percentage for products in the category"
+      - name: avg_rating
+        description: "Average rating of products in the category"
+      - name: total_rating_count
+        description: "Total number of ratings in the category"
+
+  - name: mart_discount_analysis
+    description: "Analysis of products grouped by discount range, showing average prices and discounts"
+    columns:
+      - name: discount_range
+        description: "Discount range bucket"
+      - name: products_count
+        description: "Number of products in the discount range"
+      - name: avg_actual_price
+        description: "Average actual price in the discount range"
+      - name: avg_discounted_price
+        description: "Average discounted price in the discount range"
+      - name: avg_discount_percentage
+        description: "Average discount percentage in the discount range"
+
+  - name: mart_rating_distribution
+    description: "Distribution of products across different rating buckets"
+    columns:
+      - name: rating_bucket
+        description: "Bucketed range of product ratings"
+      - name: products_count
+        description: "Number of products within the rating bucket"
+
+  - name: mart_top_rated_products
+    description: "Top 10 highest-rated products with the most rating counts"
+    columns:
+      - name: product_id
+        description: "Unique identifier of the product"
+      - name: product_name
+        description: "Name of the product"
+      - name: category
+        description: "Product category"
+      - name: rating
+        description: "Product rating"
+      - name: rating_count
+        description: "Number of ratings the product received"
+      - name: actual_price
+        description: "Original price of the product"
+      - name: discounted_price
+        description: "Discounted price of the product"
