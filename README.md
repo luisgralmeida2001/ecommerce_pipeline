@@ -26,15 +26,6 @@ Este projeto é uma pipeline de dados desenvolvida para fins de estudo em Engenh
 3. **Orquestração**:
    - Airflow controla a execução de cada etapa, garantindo o fluxo ordenado e monitorável.
 
-## Estrutura de Pastas
-airflow/
-├── dags/ # DAGs do Airflow
-├── config/ # Configurações
-├── dbt/ # Projeto dbt completo
-├── scripts/ # Scripts Python para extração
-├── logs/ # Logs do Airflow
-└── plugins/ # Plugins customizados (se houver)
-
 ---
 
 Projeto desenvolvido para aprofundar conhecimentos práticos em engenharia de dados com foco em integração de ferramentas modernas e boas práticas de pipelines.
